@@ -7,7 +7,13 @@ STAMPS_DIR :=		$(TOP)/make_stamps
 STAMPS_REMOVE =		mkdir -p $(STAMPS_DIR); rm -f $@
 STAMPS_CREATE =		mkdir -p $(STAMPS_DIR); touch $@
 
-SYSROOT_DATE :=		20170417T195210Z
+#
+# A "sysroot" tarball contains "lib", "usr/lib", and "usr/include" from a
+# particular SmartOS platform image.  This directory tree is used with the GCC
+# "--sysroot" option, in an attempt to build binaries that will run on an old
+# platform rather than just the current build system.
+#
+SYSROOT_DATE :=		20141030T081701Z
 SYSROOT_TAR :=		sysroot.joyent_$(SYSROOT_DATE).tar.gz
 
 MANTA_BASE_URL :=	https://us-east.manta.joyent.com
