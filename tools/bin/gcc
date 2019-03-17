@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ -z $CW_SYSROOT ]] || ! [[ -d $CW_SYSROOT/usr ]]; then
+	printf 'ERROR: CW_SYSROOT not set to valid sysroot\n' >&2
+	exit 1
+fi
+
+BASH_XTRACEFD=1
+set -o xtrace
+exec /opt/local/bin/gcc --sysroot="$CW_SYSROOT" "$@"

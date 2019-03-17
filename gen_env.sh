@@ -22,8 +22,8 @@ export LINT=/bin/true
 
 export CW_NO_SHADOW=1
 export BUILD_TOOLS="\$CODEMGR_WS/usr/src/tools/proto/root-\$MACH-nd/opt"
-export GNU_ROOT='/opt/local'
-export GCC_ROOT='/opt/local'
+export GNU_ROOT='$PWD/tools'
+export GCC_ROOT='$PWD/tools'
 export CW_GCC_DIR="\$GCC_ROOT/bin"
 export __GNUC=''
 export __GNUC4=''
